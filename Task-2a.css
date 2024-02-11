@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d8e3e7; /* Changed background color */
+}
+
+.stopwatch-container {
+    text-align: center;
+}
+
+.title {
+    font-size: 4em; /* Increased font size */
+    margin-bottom: 30px; /* Increased margin bottom */
+    color: #4e4e4e; /* Changed text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stopwatch {
+    text-align: center;
+    padding: 30px; /* Increased padding */
+    border-radius: 15px; /* Increased border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased box shadow */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f); /* Changed gradient colors */
+    background-size: 200% 100%;
+    animation: backgroundWave 6s linear infinite; /* Increased animation duration */
+}
+
+.display-container {
+    border-radius: 15px; /* Increased border radius */
+    overflow: hidden; 
+}
+
+.display {
+    font-size: 4em; /* Increased font size */
+    margin: 40px 0; /* Increased margin */
+    color: #fff;
+    letter-spacing: 4px; /* Increased letter spacing */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Increased text shadow */
+}
+
+button {
+    font-size: 1.8em; /* Increased font size */
+    margin: 15px; /* Increased margin */
+    padding: 14px 28px; /* Increased padding */
+    cursor: pointer;
+    transition: background-color 0.4s ease; /* Increased transition duration */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.start { background-color: #bba16c; color: #fff; } /* Changed start button color */
+.pause { background-color: #a0d2db; color: #fff; } /* Changed pause button color */
+.reset { background-color: #ffbe86; color: #fff; } /* Changed reset button color */
+.lap { background-color: #84dcc6; color: #fff; } /* Changed lap button color */
+
+button:hover {
+    background-color: #555; /* Darkened color on hover */
+    color: #fff;
+}
+
+.lap-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 25px; /* Increased margin top */
+}
+
+.lap-list li {
+    animation: fadeIn 0.6s ease-in-out; /* Increased animation duration */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes backgroundWave {
+    0% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: -100% 0%;
+    }
+}
